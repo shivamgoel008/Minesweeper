@@ -7,52 +7,105 @@
     android:background="#ADD8E6"
     tools:context=".CustomBoard">
 
-    <EditText
+<!--    <EditText-->
+<!--        android:id="@+id/hi"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="44dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:ems="10"-->
+<!--        android:gravity="center"-->
+<!--        android:hint="Enter Height"-->
+<!--        android:inputType="none|number|numberDecimal"-->
+<!--        android:textColor="#000"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/wi"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/hi"
-        android:layout_width="200dp"
-        android:layout_height="44dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Enter Height"
-        android:inputType="none|number|numberDecimal"
-        android:textColor="#000"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:hint="Enter Height*"
         app:layout_constraintBottom_toTopOf="@+id/wi"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
-    <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <EditText-->
+<!--        android:id="@+id/wi"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="44dp"-->
+<!--        android:layout_marginBottom="4dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:ems="10"-->
+<!--        android:gravity="center"-->
+<!--        android:hint="Enter Width"-->
+<!--        android:inputType="none|number|numberDecimal|phone"-->
+<!--        android:textColor="#000"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/mi"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/wi"
-        android:layout_width="200dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="4dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Enter Width"
-        android:inputType="none|number|numberDecimal|phone"
-        android:textColor="#000"
-        app:layout_constraintBottom_toTopOf="@+id/mi"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Width*"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hi">
 
-    <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/mi"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="44dp"-->
+<!--        android:layout_marginBottom="184dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:ems="10"-->
+<!--        android:gravity="center"-->
+<!--        android:hint="Enter Mines"-->
+<!--        android:inputType="none|phone"-->
+<!--        android:textColor="#000"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/submit"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/mi"
-        android:layout_width="200dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="184dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Enter Mines"
-        android:inputType="none|phone"
-        android:textColor="#000"
-        app:layout_constraintBottom_toTopOf="@+id/submit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Mines*"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wi">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/textView"

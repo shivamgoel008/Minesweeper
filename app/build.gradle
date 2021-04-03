@@ -57,4 +57,8 @@ dependencies {
 
 //    live data+viewModel
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+
+
+    // Material.io
+    implementation 'com.google.android.material:material:1.1.0-alpha07'
 }

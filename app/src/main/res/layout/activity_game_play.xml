@@ -7,6 +7,10 @@
     android:background="#ADD8E6"
     tools:context=".GamePlay">
 
+
+
+
+
     <Chronometer
         android:id="@+id/timer"
         android:layout_width="wrap_content"
@@ -72,6 +76,7 @@
         android:contentDescription="TODO" />
 
     <LinearLayout
+
         android:id="@+id/board"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -79,6 +84,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mines_left" />
+
 
     <ImageButton
         android:id="@+id/mineFlag"
@@ -92,5 +98,6 @@
         app:layout_constraintStart_toEndOf="@+id/restart"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bomb" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
