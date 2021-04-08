@@ -4,10 +4,12 @@ import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
 import android.util.Log
+import android.view.View
 import android.widget.Chronometer
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -24,12 +26,25 @@ class GamePlay: AppCompatActivity() {
     var fastestTime = " NA"
     var lastGameTime = " NA"
     var status  = Status.ONGOING
+    private lateinit var chronomter:Chronometer
+    private var isPlay = false
         private set
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_play)
+
+        chronomter = findViewById(R.id.timer)
+
+        if (!isPlay){
+            chronomter.base = SystemClock.elapsedRealtime()
+            chronomter.start()
+            Toast.makeText(this, "Game Starts", Toast.LENGTH_SHORT).show()
+            isPlay  =true
+
+        }
+
 
         val intent = intent
         var flag = intent.getIntExtra("flag",2)
@@ -353,10 +368,22 @@ class GamePlay: AppCompatActivity() {
             // Setting time formats to send to another activity
             fastestTime = "" + ((highScore / 1000) / 60) + " m " + ((highScore / 1000) % 60) + " s";
         }
-        Log.d("MainActivity","inside savetime "+fastestTime+" "+lastGameTime)
 
 //        if user lost then sending the result to result activity
         if(status == Status.WON){
+
+
+            var currentTime=timer.text.toString()
+            println("current time $currentTime" )
+            val sharedPreferences: SharedPreferences =
+                this.getSharedPreferences("time", Context.MODE_PRIVATE)
+
+            val best=sharedPreferences.getString("Best","00.00")
+            if(best!! > currentTime){
+            sharedPreferences.edit().putString("Best",currentTime).apply()
+            }
+            timer.stop()
+
             val intent= Intent(this, results::class.java).apply{
                 putExtra("result","Congratulations🤩\nYOU WON")
             }
@@ -365,6 +392,16 @@ class GamePlay: AppCompatActivity() {
 
 //        if user win then seding the result to main activity
         else if(status == Status.LOST){
+
+            var currentTime=timer.text.toString()
+            println("current time $currentTime" )
+
+            val sharedPreferences: SharedPreferences =
+            this.getSharedPreferences("time", Context.MODE_PRIVATE)
+
+            sharedPreferences.edit().putString("Last",currentTime).apply()
+//            timer.stop()
+
             val intent= Intent(this, results::class.java).apply{
                 putExtra("result","You Lost\nTry Again")
             }
