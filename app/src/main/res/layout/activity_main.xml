@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ADD8E6"
+    android:background="#fff"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/minesweeper"
-        android:textColor="#00008B"
+        android:textColor="@color/teal_700"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/choose_difficulty"
-        android:textColor="#0000CD"
+        android:textColor="@color/teal_200"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -157,7 +157,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="132dp"
-                android:background="#2898F1"
+                android:background="@drawable/mybutton"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="@string/make_a_custom_board"
@@ -173,7 +173,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="48dp"
-                android:background="#2492EA"
+                android:background="@drawable/mybutton"
                 android:text="@string/start"
                 android:textColor="#000"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -184,18 +184,18 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/rules"
-        android:layout_width="42dp"
-        android:layout_height="34dp"
-        android:background="@drawable/questionmark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.897"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091" />
+                android:id="@+id/rules"
+                android:layout_width="42dp"
+                android:layout_height="34dp"
+                android:background="@drawable/ic_baseline_question_answer_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.924"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.099" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 

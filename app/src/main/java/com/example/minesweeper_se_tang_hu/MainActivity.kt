@@ -43,11 +43,17 @@ class MainActivity : AppCompatActivity() {
 
 /* if user clicks start button after choosing difficulty level */
             start.setOnClickListener {
-                val intent = Intent(this, GamePlay::class.java).apply {
-                    putExtra("selectedLevel", level)
-                    putExtra("flag", 1)
+
+                if(level==""){
+                    Toast.makeText(this, "Choose Valid Option", Toast.LENGTH_SHORT).show()
                 }
-                startActivity(intent)
+                else {
+                    val intent = Intent(this, GamePlay::class.java).apply {
+                        putExtra("selectedLevel", level)
+                        putExtra("flag", 1)
+                    }
+                    startActivity(intent)
+                }
             }
         rules.setOnClickListener{
             showInstructions()

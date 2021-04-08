@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ADD8E6"
+    android:background="#fff"
     tools:context=".GamePlay">
 
 
@@ -65,15 +65,16 @@
 
     <ImageButton
         android:id="@+id/restart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="43dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
         android:background="#00FFFFFF"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/board"
         app:layout_constraintStart_toEndOf="@+id/minetext"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/happy_face"
-        android:contentDescription="TODO" />
+        app:layout_constraintVertical_bias="0.8"
+        app:srcCompat="@drawable/ic_baseline_refresh_24" />
 
     <LinearLayout
 
