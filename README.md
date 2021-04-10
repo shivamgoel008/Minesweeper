@@ -5,6 +5,9 @@ The objective of the game is to clear a rectangular board containing hidden ”m
 ## Difficulty Section 
 <img src="https://github.com/shivamgoel008/Minesweeper/blob/master/Images/Diffiluty.jpg" width="300" height="600"> | <img src="https://github.com/shivamgoel008/Minesweeper/blob/master/Images/instruvtiond.jpg" width="300" height="600">
 
+## Custom Difficulty Section 
+<img src="https://github.com/shivamgoel008/Minesweeper/blob/master/Images/custom%20board.jpg" width="300" height="600">
+
 ## Game Play Section 
 <img src="https://github.com/shivamgoel008/Minesweeper/blob/master/Images/game1.jpg" width="300" height="600"> | <img src="https://github.com/shivamgoel008/Minesweeper/blob/master/Images/game2.jpg" width="300" height="600">
 
