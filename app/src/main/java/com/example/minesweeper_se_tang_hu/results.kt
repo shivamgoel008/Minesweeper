@@ -30,4 +30,9 @@ class results : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    override fun onBackPressed() {
+        finishAffinity()
+    }
+
 }
