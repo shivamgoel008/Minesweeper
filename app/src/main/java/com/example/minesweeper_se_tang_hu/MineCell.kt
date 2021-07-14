@@ -18,5 +18,4 @@ class MineCell: AppCompatButton {
     var isRevealed: Boolean = false
     var isMarked: Boolean = false
     var isMine : Boolean = false
-
 }

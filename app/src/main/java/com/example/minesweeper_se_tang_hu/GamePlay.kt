@@ -28,8 +28,6 @@ class GamePlay: AppCompatActivity() {
     var status  = Status.ONGOING
     private lateinit var chronomter:Chronometer
     private var isPlay = false
-        private set
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

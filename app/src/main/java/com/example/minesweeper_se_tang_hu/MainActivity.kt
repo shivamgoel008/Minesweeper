@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
 
 /* when user clicks on Make Custom Button */
         custombutton.setOnClickListener{
-
                 val intent = Intent(this@MainActivity, CustomBoard::class.java).apply {
                     putExtra("height", 9)  //put the value
                     putExtra("width", 9)
@@ -50,13 +49,13 @@ class MainActivity : AppCompatActivity() {
             level="hard"
         }
 
+
 /* if user clicks start button after choosing difficulty level */
             start.setOnClickListener {
 
                 if(level==""){
                     Toast.makeText(this, "Choose Valid Option", Toast.LENGTH_SHORT).show()
-                }
-                else {
+                } else {
                     val intent = Intent(this, GamePlay::class.java).apply {
                         putExtra("selectedLevel", level)
                         putExtra("flag", 1)

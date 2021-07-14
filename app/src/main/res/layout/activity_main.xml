@@ -8,10 +8,10 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,59 +23,59 @@
             android:layout_width="match_parent"
             android:layout_height="600dp">
 
-    <TextView
-        android:id="@+id/toptitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/minesweeper"
-        android:textColor="@color/teal_700"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/toptitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/minesweeper"
+                android:textColor="@color/teal_700"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/besttime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/best_time2"
-        android:textColor="#000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/bestTime"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toptitle" />
+            <TextView
+                android:id="@+id/besttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/best_time2"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/bestTime"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toptitle" />
 
-    <TextView
-        android:id="@+id/bestTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/_0"
-        android:textColor="#000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/besttime"
-        app:layout_constraintTop_toBottomOf="@+id/toptitle" />
+            <TextView
+                android:id="@+id/bestTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/_0"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/besttime"
+                app:layout_constraintTop_toBottomOf="@+id/toptitle" />
 
-    <TextView
-        android:id="@+id/lasttime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/last_game_time2"
-        android:textColor="#000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/lastGameTime"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/besttime" />
+            <TextView
+                android:id="@+id/lasttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/last_game_time2"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/lastGameTime"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/besttime" />
 
             <TextView
                 android:id="@+id/lastGameTime"
@@ -91,66 +91,66 @@
                 app:layout_constraintTop_toBottomOf="@+id/bestTime" />
 
             <TextView
-        android:id="@+id/difficulty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/choose_difficulty"
-        android:textColor="@color/teal_200"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lasttime" />
+                android:id="@+id/difficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/choose_difficulty"
+                android:textColor="@color/teal_200"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lasttime" />
 
-    <RadioGroup
-        android:id="@+id/selectGameLevel"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.388"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/difficulty">
+            <RadioGroup
+                android:id="@+id/selectGameLevel"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.388"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/difficulty">
 
-        <RadioButton
-            android:id="@+id/easy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10sp"
-            android:text="@string/easy"
-            android:textColor="#000"
-            android:textSize="24sp" />
+                <RadioButton
+                    android:id="@+id/easy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:text="@string/easy"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
 
-        <RadioButton
-            android:id="@+id/medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10sp"
-            android:text="@string/medium"
-            android:textColor="#000"
-            android:textSize="24sp" />
+                <RadioButton
+                    android:id="@+id/medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:text="@string/medium"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
 
-        <RadioButton
-            android:id="@+id/hard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10sp"
-            android:text="@string/hard"
-            android:textColor="#000"
-            android:textSize="24sp" />
-    </RadioGroup>
+                <RadioButton
+                    android:id="@+id/hard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:text="@string/hard"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </RadioGroup>
 
-    <TextView
-        android:id="@+id/orLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/or"
-        android:textColor="#000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectGameLevel" />
+            <TextView
+                android:id="@+id/orLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="@string/or"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectGameLevel" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/custombutton"
@@ -199,4 +199,4 @@
 
     </ScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

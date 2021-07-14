@@ -34,7 +34,6 @@ class CustomBoard : AppCompatActivity() {
                     putExtra("mines", mine)
                 }
                 startActivity(intent)
-            
         }
     }
 }
